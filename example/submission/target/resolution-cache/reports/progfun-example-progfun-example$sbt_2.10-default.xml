@@ -7,7 +7,7 @@
 		revision="1.0.0"
 		conf="default"
 		confs="default"
-		date="20140425173158"/>
+		date="20140425185428"/>
 	<dependencies>
 		<module organisation="com.typesafe.sbteclipse" name="sbteclipse-plugin">
 			<revision name="2.1.0" status="release" pubdate="20120716181819" resolver="sbt-chain" artresolver="sbt-chain" extra-sbtVersion="0.12" extra-scalaVersion="2.9.2" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="57">

@@ -4,7 +4,7 @@
 		module="progfun-example$sources_2.10"
 		revision="1.0.0"
 		status="integration"
-		publication="20140425173109"
+		publication="20140425185428"
 	/>
 	<configurations>
 		<conf name="default" visibility="public" description=""/>
@@ -117,14 +117,8 @@
 		<dependency org="org.scala-sbt" name="test-agent" rev="0.12.4" transitive="false" conf="default->default(compile)">
 			<artifact name="test-agent" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
-		<dependency org="org.scala-tools.testing" name="test-interface" rev="0.5" transitive="false" conf="default->default(compile)">
-			<artifact name="test-interface" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-		</dependency>
 		<dependency org="org.scala-sbt" name="command" rev="0.12.4" transitive="false" conf="default->default(compile)">
 			<artifact name="command" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-		</dependency>
-		<dependency org="org.scala-sbt" name="compiler-interface" rev="0.12.4" transitive="false" conf="default->default(compile)">
-			<artifact name="compiler-interface" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
 		<dependency org="org.scala-sbt" name="precompiled-2_8_2" rev="0.12.4" transitive="false" conf="default->default(compile)">
 			<artifact name="precompiled-2_8_2" type="src" ext="jar" conf="sources" e:classifier="sources"/>
@@ -182,12 +176,6 @@
 		</dependency>
 		<dependency org="org.apache.commons" name="commons-lang3" rev="3.1" transitive="false" conf="default->default(compile)">
 			<artifact name="commons-lang3" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-		</dependency>
-		<dependency org="com.typesafe.sbteclipse" name="sbteclipse-plugin" rev="2.1.0" transitive="false" conf="default->default(compile)" sbtVersion="0.12" scalaVersion="2.9.2">
-			<artifact name="sbteclipse-plugin" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-		</dependency>
-		<dependency org="com.typesafe.sbteclipse" name="sbteclipse-core" rev="2.1.0" transitive="false" conf="default->default(compile)" sbtVersion="0.12" scalaVersion="2.9.2">
-			<artifact name="sbteclipse-core" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
 		<dependency org="org.scalaz" name="scalaz-core_2.9.2" rev="6.0.4" transitive="false" conf="default->default(compile)">
 			<artifact name="scalaz-core_2.9.2" type="src" ext="jar" conf="sources" e:classifier="sources"/>

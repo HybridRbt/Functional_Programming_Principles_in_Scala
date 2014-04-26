@@ -4,7 +4,7 @@
 		module="default-4eec55"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20140425173053"
+		publication="20140425185418"
 		e:scalaVersion="2.9.2" e:sbtVersion="0.12"
 	>
 		<description>
@@ -33,11 +33,11 @@
 	</publications>
 	<dependencies>
 		<dependency org="org.scala-sbt" name="sbt" rev="0.12.4" conf="provided->default(compile)"/>
-		<dependency org="default" name="default-c3e304" rev="0.0" conf="compile->default(compile)" e:scalaVersion="2.9.2" e:sbtVersion="0.12">
-			<artifact name="default-c3e304" type="pom" ext="pom" conf="pom"/>
-			<artifact name="default-c3e304" type="jar" ext="jar" conf="compile"/>
-			<artifact name="default-c3e304" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-			<artifact name="default-c3e304" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		<dependency org="default" name="default-55b5e7" rev="0.0" conf="compile->default(compile)" e:scalaVersion="2.9.2" e:sbtVersion="0.12">
+			<artifact name="default-55b5e7" type="pom" ext="pom" conf="pom"/>
+			<artifact name="default-55b5e7" type="jar" ext="jar" conf="compile"/>
+			<artifact name="default-55b5e7" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="default-55b5e7" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.9.2" conf="provided->default(compile)"/>
 		<exclude org="org.scala-lang" module="scala-library" artifact="*" type="jar" ext="*" matcher="exact"/>

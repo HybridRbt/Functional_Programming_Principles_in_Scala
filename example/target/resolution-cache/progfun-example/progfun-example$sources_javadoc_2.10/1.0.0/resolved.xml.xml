@@ -4,7 +4,7 @@
 		module="progfun-example$sources_javadoc_2.10"
 		revision="1.0.0"
 		status="integration"
-		publication="20140425173158"
+		publication="20140425185429"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
@@ -136,7 +136,6 @@
 		</dependency>
 		<dependency org="org.hamcrest" name="hamcrest-core" rev="1.1" transitive="false" conf="test->default(compile);test-internal->default(compile)">
 			<artifact name="hamcrest-core" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-			<artifact name="hamcrest-core" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
 		<exclude org="org.scala-lang" module="scala-library" artifact="*" type="jar" ext="*" matcher="exact"/>
 		<exclude org="org.scala-lang" module="scala-compiler" artifact="*" type="jar" ext="*" matcher="exact"/>
