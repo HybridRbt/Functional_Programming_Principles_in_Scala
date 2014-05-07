@@ -1,6 +1,6 @@
 [debug] Other repositories:
 [debug] Default repositories:
-[debug] 	Raw(ProjectResolver(inter-project, mapped: default#default-5a19ff;0.0))
+[debug] 	Raw(ProjectResolver(inter-project, mapped: default#default-6177ef;0.0))
 [debug] 	URLRepository(typesafe-ivy-releases,Patterns(ivyPatterns=List(http://repo.typesafe.com/typesafe/ivy-releases/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), artifactPatterns=List(http://repo.typesafe.com/typesafe/ivy-releases/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), isMavenCompatible=false))
 [debug] 	URLRepository(sbt-plugin-releases,Patterns(ivyPatterns=List(http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), artifactPatterns=List(http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), isMavenCompatible=false))
 [debug] 	FileRepository(local,FileConfiguration(true,None),Patterns(ivyPatterns=List(${ivy.home}/local/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), artifactPatterns=List(${ivy.home}/local/[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), isMavenCompatible=false))
@@ -1524,9 +1524,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#cache;0.12.4!cache.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.12.4!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-tools.testing#test-interface;0.5!test-interface.jar
-[debug] :: resolution report :: resolve 536ms :: artifacts dl 32ms
+[debug] :: resolution report :: resolve 540ms :: artifacts dl 20ms
 [debug] 	report for progfun-example#progfun-example$sbt_2.10;1.0.0 default produced in /Users/jeredyang/Documents/Github/Functional_Programming_Principles_in_Scala/example/target/resolution-cache/reports/progfun-example-progfun-example$sbt_2.10-default.xml
-[debug] 	resolve done (536ms resolve - 32ms download)
+[debug] 	resolve done (540ms resolve - 20ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: progfun-example#progfun-example$sources_2.10;1.0.0
 [debug] 	confs: [default]
@@ -2002,6 +2002,6 @@
 [debug] 	[NOT REQUIRED] org.scalatest#scalatest_2.9.2;1.9.1!scalatest_2.9.2.jar(src)
 [debug] 	[NOT REQUIRED] org.apache.commons#commons-lang3;3.1!commons-lang3.jar(src)
 [debug] 	[NOT REQUIRED] org.scalaz#scalaz-core_2.9.2;6.0.4!scalaz-core_2.9.2.jar(src)
-[debug] :: resolution report :: resolve 125ms :: artifacts dl 37ms
+[debug] :: resolution report :: resolve 113ms :: artifacts dl 29ms
 [debug] 	report for progfun-example#progfun-example$sources_2.10;1.0.0 default produced in /Users/jeredyang/Documents/Github/Functional_Programming_Principles_in_Scala/example/target/resolution-cache/reports/progfun-example-progfun-example$sources_2.10-default.xml
-[debug] 	resolve done (125ms resolve - 37ms download)
+[debug] 	resolve done (113ms resolve - 29ms download)

@@ -7,7 +7,7 @@
 		revision="1.0.0"
 		conf="default"
 		confs="default"
-		date="20140506215010"/>
+		date="20140507145429"/>
 	<dependencies>
 		<module organisation="org.scalaz" name="scalaz-core_2.9.2">
 			<revision name="6.0.4" status="release" pubdate="20120414041242" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://scalaz.org" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="55">
