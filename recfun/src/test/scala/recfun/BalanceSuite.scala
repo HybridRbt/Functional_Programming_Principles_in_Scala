@@ -24,4 +24,44 @@ class BalanceSuite extends FunSuite {
   test("balance: counting is not enough") {
     assert(!balance("())(".toList))
   }
+
+  test("") {
+    assert(balance("".toList))
+  }
+  test(")") {
+    assert(balance(")".toList)===false)
+  }
+
+  test("(") {
+    assert(balance("(".toList)===false)
+  }
+  test("()") {
+    assert(balance("()".toList))
+  }
+  test(")(") {
+    assert(balance(")(".toList)===false)
+  }
+  test("))") {
+    assert(balance("))".toList)===false)
+  }
+  test("((") {
+    assert(balance("((".toList)===false)
+  }
+  test(")()") {
+    assert(balance(")()".toList)===false)
+  }
+  test("())") {
+    assert(balance("())".toList)===false)
+  }
+
+  test("())(") {
+    assert(balance("())(".toList)===false)
+  }
+  test("()()") {
+    assert(balance("()()".toList))
+  }
+
+  test("(())") {
+    assert(balance("(())".toList))
+  }
 }
