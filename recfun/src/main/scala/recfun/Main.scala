@@ -24,15 +24,13 @@ object Main {
    */
   def balance(chars: List[Char]): Boolean = {
     def num_p(acc: Int, chars: List[Char]): Int = {
-      if (chars.isEmpty) acc
-      else if (acc < 0) acc
-      else if (chars.head == '(') num_p(acc+1, chars.tail)
-      else if (chars.head == ')') num_p(acc-1, chars.tail)
+      if (chars.isEmpty || acc < 0) acc
+      else if (chars.head == '(') num_p(acc + 1, chars.tail)
+      else if (chars.head == ')') num_p(acc - 1, chars.tail)
       else num_p(acc, chars.tail)
     }
 
-    if (num_p(0, chars) == 0) true
-    else false
+    num_p(0, chars) == 0
   }
 
   /**
