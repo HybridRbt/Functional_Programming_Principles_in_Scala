@@ -1242,7 +1242,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#cache;0.12.4!cache.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#test-agent;0.12.4!test-agent.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-tools.testing#test-interface;0.5!test-interface.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1720ms :: artifacts dl 41ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1847ms :: artifacts dl 36ms[0m
 [0m[[0mdebug[0m] [0m	report for default#default-63dee9;0.1-SNAPSHOT compile produced in /Users/jeredyang/Documents/Github/Functional_Programming_Principles_in_Scala/recfun/project/project/target/resolution-cache/reports/default-default-63dee9-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#default-63dee9;0.1-SNAPSHOT runtime produced in /Users/jeredyang/Documents/Github/Functional_Programming_Principles_in_Scala/recfun/project/project/target/resolution-cache/reports/default-default-63dee9-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#default-63dee9;0.1-SNAPSHOT test produced in /Users/jeredyang/Documents/Github/Functional_Programming_Principles_in_Scala/recfun/project/project/target/resolution-cache/reports/default-default-63dee9-test.xml[0m
@@ -1255,5 +1255,5 @@
 [0m[[0mdebug[0m] [0m	report for default#default-63dee9;0.1-SNAPSHOT sources produced in /Users/jeredyang/Documents/Github/Functional_Programming_Principles_in_Scala/recfun/project/project/target/resolution-cache/reports/default-default-63dee9-sources.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#default-63dee9;0.1-SNAPSHOT docs produced in /Users/jeredyang/Documents/Github/Functional_Programming_Principles_in_Scala/recfun/project/project/target/resolution-cache/reports/default-default-63dee9-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#default-63dee9;0.1-SNAPSHOT pom produced in /Users/jeredyang/Documents/Github/Functional_Programming_Principles_in_Scala/recfun/project/project/target/resolution-cache/reports/default-default-63dee9-pom.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (1720ms resolve - 41ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (1847ms resolve - 36ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
