@@ -5,11 +5,11 @@
 [debug] 	refresh = false
 [debug] resolving dependencies for configuration 'compile'
 [debug] == resolving dependencies for default#default-66949b;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->default#default-55b5e7;0.0 [compile->default(compile)]
-[info] Resolving default#default-55b5e7;0.0 ...
-[debug] sbt-chain: Checking cache for: dependency: default#default-55b5e7;0.0 {compile=[default(compile)]}
-[debug] 	found default#default-55b5e7;0.0 in inter-project
-[debug] == resolving dependencies default#default-55b5e7;0.0->org.jetbrains#sbt-structure;2.3.2 [compile->default(compile)]
+[debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->default#default-5a19ff;0.0 [compile->default(compile)]
+[info] Resolving default#default-5a19ff;0.0 ...
+[debug] sbt-chain: Checking cache for: dependency: default#default-5a19ff;0.0 {compile=[default(compile)]}
+[debug] 	found default#default-5a19ff;0.0 in inter-project
+[debug] == resolving dependencies default#default-5a19ff;0.0->org.jetbrains#sbt-structure;2.3.2 [compile->default(compile)]
 [info] Resolving org.jetbrains#sbt-structure;2.3.2 ...
 [debug] sbt-chain: Checking cache for: dependency: org.jetbrains#sbt-structure;2.3.2 {compile=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.jetbrains#sbt-structure;2.3.2
@@ -238,8 +238,8 @@
 [debug] resolving dependencies for configuration 'runtime'
 [debug] == resolving dependencies for default#default-66949b;0.1-SNAPSHOT [runtime]
 [debug] == resolving dependencies for default#default-66949b;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->default#default-55b5e7;0.0 [compile->default(compile)]
-[debug] == resolving dependencies default#default-55b5e7;0.0->org.jetbrains#sbt-structure;2.3.2 [compile->default(compile)]
+[debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->default#default-5a19ff;0.0 [compile->default(compile)]
+[debug] == resolving dependencies default#default-5a19ff;0.0->org.jetbrains#sbt-structure;2.3.2 [compile->default(compile)]
 [debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->net.databinder#dispatch-http_2.9.2;0.8.8 [compile->default(compile)]
 [debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->net.databinder#dispatch-http_2.9.2;0.8.8 [compile->runtime]
 [debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->net.databinder#dispatch-http_2.9.2;0.8.8 [compile->compile]
@@ -355,8 +355,8 @@
 [debug] == resolving dependencies for default#default-66949b;0.1-SNAPSHOT [test]
 [debug] == resolving dependencies for default#default-66949b;0.1-SNAPSHOT [runtime]
 [debug] == resolving dependencies for default#default-66949b;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->default#default-55b5e7;0.0 [compile->default(compile)]
-[debug] == resolving dependencies default#default-55b5e7;0.0->org.jetbrains#sbt-structure;2.3.2 [compile->default(compile)]
+[debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->default#default-5a19ff;0.0 [compile->default(compile)]
+[debug] == resolving dependencies default#default-5a19ff;0.0->org.jetbrains#sbt-structure;2.3.2 [compile->default(compile)]
 [debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->net.databinder#dispatch-http_2.9.2;0.8.8 [compile->default(compile)]
 [debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->net.databinder#dispatch-http_2.9.2;0.8.8 [compile->runtime]
 [debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->net.databinder#dispatch-http_2.9.2;0.8.8 [compile->compile]
@@ -996,8 +996,8 @@
 [debug] resolving dependencies for configuration 'compile-internal'
 [debug] == resolving dependencies for default#default-66949b;0.1-SNAPSHOT [compile-internal]
 [debug] == resolving dependencies for default#default-66949b;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->default#default-55b5e7;0.0 [compile->default(compile)]
-[debug] == resolving dependencies default#default-55b5e7;0.0->org.jetbrains#sbt-structure;2.3.2 [compile->default(compile)]
+[debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->default#default-5a19ff;0.0 [compile->default(compile)]
+[debug] == resolving dependencies default#default-5a19ff;0.0->org.jetbrains#sbt-structure;2.3.2 [compile->default(compile)]
 [debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->net.databinder#dispatch-http_2.9.2;0.8.8 [compile->default(compile)]
 [debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->net.databinder#dispatch-http_2.9.2;0.8.8 [compile->runtime]
 [debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->net.databinder#dispatch-http_2.9.2;0.8.8 [compile->compile]
@@ -1437,8 +1437,8 @@
 [debug] == resolving dependencies for default#default-66949b;0.1-SNAPSHOT [runtime-internal]
 [debug] == resolving dependencies for default#default-66949b;0.1-SNAPSHOT [runtime]
 [debug] == resolving dependencies for default#default-66949b;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->default#default-55b5e7;0.0 [compile->default(compile)]
-[debug] == resolving dependencies default#default-55b5e7;0.0->org.jetbrains#sbt-structure;2.3.2 [compile->default(compile)]
+[debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->default#default-5a19ff;0.0 [compile->default(compile)]
+[debug] == resolving dependencies default#default-5a19ff;0.0->org.jetbrains#sbt-structure;2.3.2 [compile->default(compile)]
 [debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->net.databinder#dispatch-http_2.9.2;0.8.8 [compile->default(compile)]
 [debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->net.databinder#dispatch-http_2.9.2;0.8.8 [compile->runtime]
 [debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->net.databinder#dispatch-http_2.9.2;0.8.8 [compile->compile]
@@ -1556,8 +1556,8 @@
 [debug] == resolving dependencies for default#default-66949b;0.1-SNAPSHOT [test]
 [debug] == resolving dependencies for default#default-66949b;0.1-SNAPSHOT [runtime]
 [debug] == resolving dependencies for default#default-66949b;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->default#default-55b5e7;0.0 [compile->default(compile)]
-[debug] == resolving dependencies default#default-55b5e7;0.0->org.jetbrains#sbt-structure;2.3.2 [compile->default(compile)]
+[debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->default#default-5a19ff;0.0 [compile->default(compile)]
+[debug] == resolving dependencies default#default-5a19ff;0.0->org.jetbrains#sbt-structure;2.3.2 [compile->default(compile)]
 [debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->net.databinder#dispatch-http_2.9.2;0.8.8 [compile->default(compile)]
 [debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->net.databinder#dispatch-http_2.9.2;0.8.8 [compile->runtime]
 [debug] == resolving dependencies default#default-66949b;0.1-SNAPSHOT->net.databinder#dispatch-http_2.9.2;0.8.8 [compile->compile]
@@ -2063,7 +2063,7 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#cache;0.12.4!cache.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.12.4!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-tools.testing#test-interface;0.5!test-interface.jar
-[debug] :: resolution report :: resolve 736ms :: artifacts dl 37ms
+[debug] :: resolution report :: resolve 781ms :: artifacts dl 33ms
 [debug] 	report for default#default-66949b;0.1-SNAPSHOT compile produced in /Users/jeredyang/Documents/Github/Functional_Programming_Principles_in_Scala/example/project/target/resolution-cache/reports/default-default-66949b-compile.xml
 [debug] 	report for default#default-66949b;0.1-SNAPSHOT runtime produced in /Users/jeredyang/Documents/Github/Functional_Programming_Principles_in_Scala/example/project/target/resolution-cache/reports/default-default-66949b-runtime.xml
 [debug] 	report for default#default-66949b;0.1-SNAPSHOT test produced in /Users/jeredyang/Documents/Github/Functional_Programming_Principles_in_Scala/example/project/target/resolution-cache/reports/default-default-66949b-test.xml
@@ -2076,5 +2076,5 @@
 [debug] 	report for default#default-66949b;0.1-SNAPSHOT sources produced in /Users/jeredyang/Documents/Github/Functional_Programming_Principles_in_Scala/example/project/target/resolution-cache/reports/default-default-66949b-sources.xml
 [debug] 	report for default#default-66949b;0.1-SNAPSHOT docs produced in /Users/jeredyang/Documents/Github/Functional_Programming_Principles_in_Scala/example/project/target/resolution-cache/reports/default-default-66949b-docs.xml
 [debug] 	report for default#default-66949b;0.1-SNAPSHOT pom produced in /Users/jeredyang/Documents/Github/Functional_Programming_Principles_in_Scala/example/project/target/resolution-cache/reports/default-default-66949b-pom.xml
-[debug] 	resolve done (736ms resolve - 37ms download)
+[debug] 	resolve done (781ms resolve - 33ms download)
 [info] Done updating.
