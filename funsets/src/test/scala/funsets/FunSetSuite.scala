@@ -292,13 +292,13 @@ class FunSetSuite extends FunSuite {
       val s0 = intersect(s2a, s3a)
       /** an empty one */
       val su1 = union(s1a, s2a)
-      /** set == (1, 1000) */
+      /** set == (1, 2000) */
       val su2 = union(su1, s3a)
-      /** set == (1, 1000, 30) */
+      /** set == (1, 2000, 30) */
       val su3 = union(su2, s4a)
-      /** set == (1, 1000, 30, 10) */
+      /** set == (1, 2000, 30, 10) */
       val su4 = union(su3, s5a)
-      /** set == (1, 1000, 30, 10, -995) */
+      /** set == (1, 2000, 30, 10, -995) */
       val sfa1 = forall(su4, (x: Int) => x > 2)
       /** would return false */
       val sfa2 = forall(su4, (x: Int) => x < 0)
@@ -309,8 +309,8 @@ class FunSetSuite extends FunSuite {
 
       assert(!sfa1, "Failed: forall should return false")
       assert(!sfa2, "Failed: forall should return false")
-      assert(sfa3, "Failed: forall should return true")
-      assert(sfa0, "Failed: forall should return true")
+      assert(!sfa3, "sfa3 Failed: forall should return false")
+      assert(sfa0, "sfa0 Failed: forall should return true")
     }
   }
 
@@ -353,19 +353,38 @@ class FunSetSuite extends FunSuite {
       assert(!sfa3, "Failed: forall should return false")
       assert(!sfa0, "Failed: forall should return false")
     }
-  }
 
-  new TestSets {
-    val s = union(s1, s2)
-    val s4 = union(s, s3) /** s4 = (1, 2, 3) */
+    new TestSets {
+      val s = union(s1, s2)
+      val s4 = union(s, s3) /** s4 = (1, 2, 3) */
 
-    assert(FunSets.toString(s4) === "{1,2,3}", "Failed: s4 should be {1,2,3}")
+      assert(FunSets.toString(s4) === "{1,2,3}", "Failed: s4 should be {1,2,3}")
 
-    val s5 = map(s4, (x: Int) => x * x) /** s5 = (1, 4, 9) */
-    assert(FunSets.toString(s5) === "{1,4,9}", "Failed: s5 should be {1,4,9}")
+      val s5 = map(s4, (x: Int) => x * x) /** s5 = (1, 4, 9) */
+      assert(FunSets.toString(s5) === "{1,4,9}", "Failed: s5 should be {1,4,9}")
 
-    assert(contains(s5, 1), "Failed: s5 does not have 1")
-    assert(contains(s5, 4), "Failed: s5 does not have 4")
-    assert(contains(s5, 9), "Failed: s5 does not have 9")
+      assert(contains(s5, 1), "Failed: s5 does not have 1")
+      assert(contains(s5, 4), "Failed: s5 does not have 4")
+      assert(contains(s5, 9), "Failed: s5 does not have 9")
+    }
+
+    new TestSets {
+      val s = (x: Int) => x >= -999 && x <= 999
+      val m = map(s, x => x * 2)
+
+      assert(forall(m, x => x % 2 == 0))
+    }
+
+    new TestSets {
+      val s1b = singletonSet(1)
+      val s2b = union(s1b, singletonSet(3))
+      val s3b = union(s2b, singletonSet(4))
+      val s4b = union(s3b, singletonSet(5))
+      val s5b = union(s4b, singletonSet(7))
+      val s6b = union(s5b, singletonSet(1000))
+      val s7b = map(s6b, x => x - 1)
+
+      assert(FunSets.toString(s7b) === "{0,2,3,4,6,999}", "map y = x-1 failed")
+    }
   }
 }
