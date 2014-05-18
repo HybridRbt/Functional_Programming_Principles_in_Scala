@@ -314,6 +314,20 @@ class FunSetSuite extends FunSuite {
     }
   }
 
+  test("exists & filter: even and 3. my version") {
+    new TestSets {
+      val s_even = (x: Int) => x % 2 == 0
+      val s_union = union(s_even, s3) // contains even numbers and 3
+      val r1 = exists(s_union, (x: Int) => x == 1)
+      val r2 = exists(s_union, (x: Int) => x == 2)
+      val r3 = exists(s_union, (x: Int) => x == 3)
+      assert(!r1, "exists 1")
+      assert(r2, "exists 2")
+      assert(r3, "exists 3")
+      assert(exists(s_union, x => x % 2 == 1), "even and 3")
+    }
+  }
+
   test("map tests all integer in bound = +/- 1000") {
     new TestSets2 {
       val s0 = intersect(s2a, s3a)
