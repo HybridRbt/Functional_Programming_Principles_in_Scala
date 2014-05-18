@@ -4,8 +4,6 @@
     <list default="true" id="f529c1ea-e8e5-48fd-a9ed-6f49bba7f8b3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/funsets/FunSetSuite.scala" afterPath="$PROJECT_DIR$/src/test/scala/funsets/FunSetSuite.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/funsets/FunSets.scala" afterPath="$PROJECT_DIR$/src/main/scala/funsets/FunSets.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../EclipseProjects/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterPath="$PROJECT_DIR$/../EclipseProjects/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="progfun-funsets.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,28 +26,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FunSets.scala" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FunSets.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/funsets/FunSets.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70212764" vertical-offset="675" max-vertical-offset="1755">
-              <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="2085">
+              <caret line="119" column="35" selection-start-line="119" selection-start-column="35" selection-end-line="119" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FunSetSuite.scala" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="FunSetSuite.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/scala/funsets/FunSetSuite.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1590" max-vertical-offset="2295">
-              <caret line="297" column="13" selection-start-line="297" selection-start-column="13" selection-end-line="297" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.16737589" vertical-offset="1487" max-vertical-offset="2715">
+              <caret line="289" column="0" selection-start-line="289" selection-start-column="0" selection-end-line="289" selection-end-column="0" />
               <folding>
-                <element signature="e#2756#3297#0" expanded="false" />
-                <element signature="e#3921#4457#0" expanded="false" />
-                <element signature="e#4497#5194#0" expanded="false" />
-                <element signature="e#5252#6147#0" expanded="false" />
-                <element signature="e#6205#7145#1" expanded="false" />
-                <element signature="e#7200#8661#1" expanded="false" />
+                <element signature="e#2740#3277#0" expanded="false" />
+                <element signature="e#3321#3857#1" expanded="false" />
+                <element signature="e#3901#4437#0" expanded="false" />
+                <element signature="e#4477#5174#0" expanded="false" />
+                <element signature="e#5232#6346#0" expanded="false" />
+                <element signature="e#6404#7344#1" expanded="false" />
+                <element signature="e#7399#8884#1" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -68,8 +67,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/test/scala/funsets/FunSetSuite.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/funsets/FunSets.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/funsets/FunSetSuite.scala" />
       </list>
     </option>
   </component>
@@ -517,26 +516,27 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/scala/funsets/FunSetSuite.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/funsets/FunSets.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1590" max-vertical-offset="2295">
-          <caret line="297" column="13" selection-start-line="297" selection-start-column="13" selection-end-line="297" selection-end-column="13" />
-          <folding>
-            <element signature="e#2756#3297#0" expanded="false" />
-            <element signature="e#3921#4457#0" expanded="false" />
-            <element signature="e#4497#5194#0" expanded="false" />
-            <element signature="e#5252#6147#0" expanded="false" />
-            <element signature="e#6205#7145#1" expanded="false" />
-            <element signature="e#7200#8661#1" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="2085">
+          <caret line="119" column="35" selection-start-line="119" selection-start-column="35" selection-end-line="119" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/funsets/FunSets.scala">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/funsets/FunSetSuite.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70212764" vertical-offset="675" max-vertical-offset="1755">
-          <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
-          <folding />
+        <state vertical-scroll-proportion="0.16737589" vertical-offset="1487" max-vertical-offset="2715">
+          <caret line="289" column="0" selection-start-line="289" selection-start-column="0" selection-end-line="289" selection-end-column="0" />
+          <folding>
+            <element signature="e#2740#3277#0" expanded="false" />
+            <element signature="e#3321#3857#1" expanded="false" />
+            <element signature="e#3901#4437#0" expanded="false" />
+            <element signature="e#4477#5174#0" expanded="false" />
+            <element signature="e#5232#6346#0" expanded="false" />
+            <element signature="e#6404#7344#1" expanded="false" />
+            <element signature="e#7399#8884#1" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
