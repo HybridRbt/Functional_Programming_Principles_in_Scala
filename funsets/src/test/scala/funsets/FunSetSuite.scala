@@ -8,8 +8,8 @@ import org.scalatest.junit.JUnitRunner
 /**
  * This class is a test suite for the methods in object FunSets. To run
  * the test suite, you can either:
- *  - run the "test" command in the SBT console
- *  - right-click the file in eclipse and chose "Run As" - "JUnit Test"
+ * - run the "test" command in the SBT console
+ * - right-click the file in eclipse and chose "Run As" - "JUnit Test"
  */
 @RunWith(classOf[JUnitRunner])
 class FunSetSuite extends FunSuite {
@@ -21,15 +21,15 @@ class FunSetSuite extends FunSuite {
    * http://doc.scalatest.org/1.9.1/index.html#org.scalatest.FunSuite
    *
    * Operators
-   *  - test
-   *  - ignore
-   *  - pending
+   * - test
+   * - ignore
+   * - pending
    */
 
   /**
    * Tests are written using the "test" operator and the "assert" method.
    */
- ignore("string take") {
+  ignore("string take") {
     val message = "hello, world"
     assert(message.take(5) == "hello")
   }
@@ -47,30 +47,30 @@ class FunSetSuite extends FunSuite {
     assert(1 + 2 === 3)
   }
 
-  
+
   import FunSets._
 
   test("contains is implemented") {
     assert(contains(x => true, 100))
   }
-  
+
   /**
    * When writing tests, one would often like to re-use certain values for multiple
    * tests. For instance, we would like to create an Int-set and have multiple test
    * about it.
-   * 
+   *
    * Instead of copy-pasting the code for creating the set into every test, we can
    * store it in the test class using a val:
-   * 
-   *   val s1 = singletonSet(1)
-   * 
+   *
+   * val s1 = singletonSet(1)
+   *
    * However, what happens if the method "singletonSet" has a bug and crashes? Then
    * the test methods are not even executed, because creating an instance of the
    * test class fails!
-   * 
+   *
    * Therefore, we put the shared values into a separate trait (traits are like
    * abstract classes), and create an instance inside each test method.
-   * 
+   *
    */
 
   trait TestSets {
@@ -90,12 +90,12 @@ class FunSetSuite extends FunSuite {
   /**
    * This test is currently disabled (by using "ignore") because the method
    * "singletonSet" is not yet implemented and the test would fail.
-   * 
+   *
    * Once you finish your implementation of "singletonSet", exchange the
    * function "ignore" by "test".
    */
   test("singletonSet(1) contains only 1") {
-    
+
     /**
      * We create a new instance of the "TestSets" trait, this gives us access
      * to the values "s1" to "s3". 
@@ -198,6 +198,15 @@ class FunSetSuite extends FunSuite {
       assert(!contains(si, 3), "Failed: Union has 3")
       assert(!contains(si, 2), "Failed: Union has 2")
     }
+
+    new TestSets {
+      val su1 = union(s1, s2)
+      val si = intersect(su1, s3)
+
+      assert(FunSets.toString(si) === "{}", "Failed: si should be empty")
+
+      /** have to explicitly call FunSets.toSring */
+    }
   }
 
   test("diff contains only elements in s and not in t") {
@@ -235,7 +244,8 @@ class FunSetSuite extends FunSuite {
   test("filter contains subset of s that satisfy p") {
     new TestSets {
       val su1 = union(s1, s2)
-      val su2 = union(su1, s3) /** set == (1, 2, 3) */
+      val su2 = union(su1, s3)
+      /** set == (1, 2, 3) */
       val sf = filter(su2, (x: Int) => x > 2) /** would return (3) */
 
       assert(contains(sf, 3), "Failed: filter does not have 3")
@@ -245,7 +255,8 @@ class FunSetSuite extends FunSuite {
 
     new TestSets {
       val su1 = union(s1, s2)
-      val su2 = union(su1, s3) /** set == (1, 2, 3) */
+      val su2 = union(su1, s3)
+      /** set == (1, 2, 3) */
       val sf = filter(su2, (x: Int) => x < 3) /** would return (1, 2) */
 
       assert(contains(sf, 1), "Failed: filter does not have 1")
@@ -255,7 +266,8 @@ class FunSetSuite extends FunSuite {
 
     new TestSets {
       val su1 = union(s1, s2)
-      val su2 = union(su1, s3) /** set == (1, 2, 3) */
+      val su2 = union(su1, s3)
+      /** set == (1, 2, 3) */
       val sf = filter(su2, (x: Int) => x > 3) /** would return (*empty*) */
 
       assert(!contains(sf, 1), "Failed: filter has 1")
@@ -265,7 +277,8 @@ class FunSetSuite extends FunSuite {
 
     new TestSets {
       val su1 = union(s1, s2)
-      val su2 = union(su1, s3) /** set == (1, 2, 3) */
+      val su2 = union(su1, s3)
+      /** set == (1, 2, 3) */
       val sf = filter(su2, (x: Int) => x > 0) /** would return (1, 2, 3) */
 
       assert(contains(sf, 1), "Failed: filter does not have 1")
@@ -276,7 +289,8 @@ class FunSetSuite extends FunSuite {
 
   test("forall tests all integer in bound = +/- 1000") {
     new TestSets2 {
-      val s0 = intersect(s2a, s3a) /** an empty one */
+      val s0 = intersect(s2a, s3a)
+      /** an empty one */
       val su1 = union(s1a, s2a)
       /** set == (1, 1000) */
       val su2 = union(su1, s3a)
@@ -289,13 +303,55 @@ class FunSetSuite extends FunSuite {
       /** would return false */
       val sfa2 = forall(su4, (x: Int) => x < 0)
       /** would return false */
-      val sfa3 = forall(su4, (x: Int) => x > -999 && x < 2000) /** would return true */
+      val sfa3 = forall(su4, (x: Int) => x > -999 && x < 2000)
+      /** would return true */
       val sfa0 = forall(s0, (x: Int) => x > 2) /** would return true */
 
       assert(!sfa1, "Failed: forall should return false")
       assert(!sfa2, "Failed: forall should return false")
       assert(sfa3, "Failed: forall should return true")
-      assert(sfa0, "Failed: forall should return false")
+      assert(sfa0, "Failed: forall should return true")
     }
+  }
+
+  test("map tests all integer in bound = +/- 1000") {
+    new TestSets2 {
+      val s0 = intersect(s2a, s3a)
+      /** an empty one */
+      val su1 = union(s1a, s2a)
+      /** set == (1, 1000) */
+      val su2 = union(su1, s3a)
+      /** set == (1, 1000, 30) */
+      val su3 = union(su2, s4a)
+      /** set == (1, 1000, 30, 10) */
+      val su4 = union(su3, s5a)
+      /** set == (1, 1000, 30, 10, -995) */
+      val sfa1 = exists(su4, (x: Int) => x > 2)
+      /** would return false */
+      val sfa2 = exists(su4, (x: Int) => x < 0)
+      /** would return false */
+      val sfa3 = exists(su4, (x: Int) => x < -998)
+      /** would return false */
+      val sfa0 = exists(s0, (x: Int) => x > 2) /** would return false */
+
+      assert(sfa1, "Failed: forall should return true")
+      assert(sfa2, "Failed: forall should return true")
+      assert(!sfa3, "Failed: forall should return false")
+      assert(!sfa0, "Failed: forall should return false")
+    }
+  }
+
+  new TestSets {
+    val s = union(s1, s2)
+    val s4 = union(s, s3) /** s4 = (1, 2, 3) */
+
+    assert(FunSets.toString(s4) === "{1,2,3}", "Failed: s4 should be {1,2,3}")
+
+    val s5 = map(s4, (x: Int) => x * x) /** s5 = (1, 4, 9) */
+    assert(FunSets.toString(s5) === "{1,4,9}", "Failed: s5 should be {1,4,9}")
+
+    assert(contains(s5, 1), "Failed: s5 does not have 1")
+    assert(contains(s5, 4), "Failed: s5 does not have 4")
+    assert(contains(s5, 9), "Failed: s5 does not have 9")
   }
 }
