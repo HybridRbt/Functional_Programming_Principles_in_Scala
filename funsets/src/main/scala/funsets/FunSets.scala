@@ -25,9 +25,9 @@ object FunSets {
   }
 
   /**
-  * Returns the union of the two given sets,
-  * the sets of all elements that are in either `s` or `t`.
-  */
+   * Returns the union of the two given sets,
+   * the sets of all elements that are in either `s` or `t`.
+   */
   def union(s: Set, t: Set): Set = {
     (x: Int) => contains(t, x) || contains(s, x)
   }
@@ -52,11 +52,12 @@ object FunSets {
   }
 
   /**
-   * Returns the subset of `s` for which `p` holds.
+   * Returns the subset of `s` for which `p` holds. => intersect of s, p
    */
   def filter(s: Set, p: Int => Boolean): Set = {
     //(x: Int) => contains(s, x) && p(x)
-    (x: Int) => contains(s, x) && contains(p, x)
+    //(x: Int) => contains(s, x) && contains(p, x)
+    intersect(s, p)
   }
 
   /**
@@ -73,9 +74,17 @@ object FunSets {
    */
   def forall(s: Set, p: Int => Boolean): Boolean = {
     def iter(a: Int): Boolean = {
-      if (a < -bound) true /** finished iteration and no false, so true */
-      else if (contains(s, a) && !contains(p, a)) false  /** when a is in bound, test to see if it is in a, and if it is, if it satisfy p */
-      else iter(a-1)  /** a satisfy the req, examine the next one */
+      if (a < -bound) true
+
+      /** finished iteration and no false, so true */
+      //else if (contains(s, a) && !contains(p, a)) false  /** when a is in bound, test to see if it is in a, and if it is, if it satisfy p */
+      else if (FunSets.toString(diff(s, p)) != "{}") false
+
+      /** when a is in bound, test to see if it is in a, and if it is, if it satisfy p */
+      /** see p as another set, this means diff of s, p must be empty or forall return false */
+      else iter(a - 1)
+
+      /** a satisfy the req, examine the next one */
     }
     iter(bound)
   }
@@ -85,14 +94,27 @@ object FunSets {
    * that satisfies `p`.
    */
   /**
-   * see p as another set, this translate into: if there is at least one inbound integer in s that is also in p.
+   * see p as another set, this translate into: if there is at least one inbound integer in s that is also in p. keep in mind that empty set
+   * is also a subset of p and will yield true, which should be flipped. otherwise .
    */
-  def exists(s: Set, p: Int => Boolean): Boolean = ???
+  def exists(s: Set, p: Int => Boolean): Boolean = {
+    if (FunSets.toString(intersect(s, p)) == "{}") false
+
+    /** no intersect, return false */
+    else forall(intersect(s, p), s)
+  }
 
   /**
    * Returns a set transformed by applying `f` to each element of `s`.
    */
-  def map(s: Set, f: Int => Int): Set = ???
+  /**
+   * given the input set x, return the output set of f(x).
+   */
+  def map(s: Set, f: Int => Int): Set = {
+    (y: Int) => exists(s, (x: Int) => y == f(x))
+
+    /** if x is in S{x}, then f(x) must be in S{f(x)} */
+  }
 
   /**
    * Displays the contents of a set
