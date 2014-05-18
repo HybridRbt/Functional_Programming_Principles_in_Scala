@@ -2,116 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f529c1ea-e8e5-48fd-a9ed-6f49bba7f8b3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT___scala_compiler_bundle_2_10_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT___scala_compiler_bundle_2_10_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_google_code_gson_gson_2_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__com_google_code_gson_gson_2_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_netflix_rxjava_rxjava_core_0_15_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__com_netflix_rxjava_rxjava_core_0_15_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_netflix_rxjava_rxjava_scala_0_15_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__com_netflix_rxjava_rxjava_scala_0_15_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_ning_async_http_client_1_7_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__com_ning_async_http_client_1_7_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_squareup_retrofit_retrofit_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__com_squareup_retrofit_retrofit_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_thoughtworks_paranamer_paranamer_2_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__com_thoughtworks_paranamer_paranamer_2_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_typesafe_akka_akka_actor_2_10_2_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__com_typesafe_akka_akka_actor_2_10_2_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_typesafe_akka_akka_testkit_2_10_2_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__com_typesafe_akka_akka_testkit_2_10_2_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_typesafe_config_1_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__com_typesafe_config_1_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__io_netty_netty_3_6_3_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__io_netty_netty_3_6_3_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__junit_junit_4_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__junit_junit_4_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__net_databinder_dispatch_dispatch_core_2_10_0_11_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__net_databinder_dispatch_dispatch_core_2_10_0_11_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_hamcrest_hamcrest_core_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__org_hamcrest_hamcrest_core_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_json4s_json4s_ast_2_10_3_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__org_json4s_json4s_ast_2_10_3_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_json4s_json4s_core_2_10_3_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__org_json4s_json4s_core_2_10_3_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_json4s_json4s_native_2_10_3_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__org_json4s_json4s_native_2_10_3_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_mockito_mockito_all_1_9_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__org_mockito_mockito_all_1_9_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_lang_modules_scala_async_2_10_0_9_0_M2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__org_scala_lang_modules_scala_async_2_10_0_9_0_M2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_lang_scala_actors_2_10_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__org_scala_lang_scala_actors_2_10_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_lang_scala_compiler_2_10_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__org_scala_lang_scala_compiler_2_10_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_lang_scala_library_2_10_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__org_scala_lang_scala_library_2_10_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_lang_scala_reflect_2_10_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__org_scala_lang_scala_reflect_2_10_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_lang_scala_swing_2_10_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__org_scala_lang_scala_swing_2_10_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_lang_scalap_2_10_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__org_scala_lang_scalap_2_10_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_tools_testing_test_interface_0_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__org_scala_tools_testing_test_interface_0_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scalacheck_scalacheck_2_10_1_10_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__org_scalacheck_scalacheck_2_10_1_10_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scalatest_scalatest_2_10_1_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__org_scalatest_scalatest_2_10_1_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_slf4j_slf4j_api_1_7_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__org_slf4j_slf4j_api_1_7_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_slf4j_slf4j_simple_1_7_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/libraries/SBT__org_slf4j_slf4j_simple_1_7_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/assignment-build.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/modules/assignment-build.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/assignment.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/modules/assignment.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/highlighting.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/highlighting.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/src/main/scala/week3/rationals.sc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sbt.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/sbt.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/submission-build.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/modules/submission-build.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/submission.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../progfun/.idea/modules/submission.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/project/target/scala-2.9.2/sbt-0.12/cache/default-63dee9/global/update/inputs" afterPath="$PROJECT_DIR$/../recfun/project/project/target/scala-2.9.2/sbt-0.12/cache/default-63dee9/global/update/inputs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/scala-2.9.2/sbt-0.12/cache/default-2e18f2/global/update/inputs" afterPath="$PROJECT_DIR$/../recfun/project/target/scala-2.9.2/sbt-0.12/cache/default-2e18f2/global/update/inputs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/project/target/scala-2.9.2/sbt-0.12/cache/default-63dee9/global/update/output" afterPath="$PROJECT_DIR$/../recfun/project/project/target/scala-2.9.2/sbt-0.12/cache/default-63dee9/global/update/output" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/scala-2.9.2/sbt-0.12/cache/default-2e18f2/global/update/output" afterPath="$PROJECT_DIR$/../recfun/project/target/scala-2.9.2/sbt-0.12/cache/default-2e18f2/global/update/output" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-compile-internal.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-compile-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-compile.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-compile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-docs.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-docs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-optional.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-optional.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-plugin.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-pom.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-provided.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-provided.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-runtime-internal.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-runtime-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-runtime.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-runtime.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-sources.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-sources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-test-internal.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-test-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-test.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-default-2e18f2-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/project/target/resolution-cache/reports/default-default-63dee9-compile.xml" afterPath="$PROJECT_DIR$/../recfun/project/project/target/resolution-cache/reports/default-default-63dee9-compile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/project/target/resolution-cache/reports/default-default-63dee9-docs.xml" afterPath="$PROJECT_DIR$/../recfun/project/project/target/resolution-cache/reports/default-default-63dee9-docs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/project/target/resolution-cache/reports/default-default-63dee9-optional.xml" afterPath="$PROJECT_DIR$/../recfun/project/project/target/resolution-cache/reports/default-default-63dee9-optional.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/project/target/resolution-cache/reports/default-default-63dee9-plugin.xml" afterPath="$PROJECT_DIR$/../recfun/project/project/target/resolution-cache/reports/default-default-63dee9-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/project/target/resolution-cache/reports/default-default-63dee9-pom.xml" afterPath="$PROJECT_DIR$/../recfun/project/project/target/resolution-cache/reports/default-default-63dee9-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/project/target/resolution-cache/reports/default-default-63dee9-provided.xml" afterPath="$PROJECT_DIR$/../recfun/project/project/target/resolution-cache/reports/default-default-63dee9-provided.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/project/target/resolution-cache/reports/default-default-63dee9-runtime-internal.xml" afterPath="$PROJECT_DIR$/../recfun/project/project/target/resolution-cache/reports/default-default-63dee9-runtime-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/project/target/resolution-cache/reports/default-default-63dee9-runtime.xml" afterPath="$PROJECT_DIR$/../recfun/project/project/target/resolution-cache/reports/default-default-63dee9-runtime.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/project/target/resolution-cache/reports/default-default-63dee9-sources.xml" afterPath="$PROJECT_DIR$/../recfun/project/project/target/resolution-cache/reports/default-default-63dee9-sources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/project/target/resolution-cache/reports/default-default-63dee9-test-internal.xml" afterPath="$PROJECT_DIR$/../recfun/project/project/target/resolution-cache/reports/default-default-63dee9-test-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/project/target/resolution-cache/reports/default-default-63dee9-test.xml" afterPath="$PROJECT_DIR$/../recfun/project/project/target/resolution-cache/reports/default-default-63dee9-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/project/target/streams/$global/ivy-configuration/$global/out" afterPath="$PROJECT_DIR$/../recfun/project/project/target/streams/$global/ivy-configuration/$global/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/project/target/streams/$global/update/$global/out" afterPath="$PROJECT_DIR$/../recfun/project/project/target/streams/$global/update/$global/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/streams/$global/ivy-configuration/$global/out" afterPath="$PROJECT_DIR$/../recfun/project/target/streams/$global/ivy-configuration/$global/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/streams/$global/update/$global/out" afterPath="$PROJECT_DIR$/../recfun/project/target/streams/$global/update/$global/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/submission/target/streams/$global/update-classifiers/$global/out" afterPath="$PROJECT_DIR$/../recfun/submission/target/streams/$global/update-classifiers/$global/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/submission/target/streams/$global/update-sbt-classifiers/$global/out" afterPath="$PROJECT_DIR$/../recfun/submission/target/streams/$global/update-sbt-classifiers/$global/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/target/streams/$global/update-classifiers/$global/out" afterPath="$PROJECT_DIR$/../recfun/target/streams/$global/update-classifiers/$global/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/default/default-2e18f2/scala_2.9.2/sbt_0.12/0.1-SNAPSHOT/resolved.xml.properties" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/default/default-2e18f2/scala_2.9.2/sbt_0.12/0.1-SNAPSHOT/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/default/default-2e18f2/scala_2.9.2/sbt_0.12/0.1-SNAPSHOT/resolved.xml.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/default/default-2e18f2/scala_2.9.2/sbt_0.12/0.1-SNAPSHOT/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../recfun/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/funsets/FunSetSuite.scala" afterPath="$PROJECT_DIR$/src/test/scala/funsets/FunSetSuite.scala" />
     </list>
     <ignored path="progfun-funsets.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -147,8 +38,8 @@
       <file leaf-file-name="FunSetSuite.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/scala/funsets/FunSetSuite.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8728448" vertical-offset="225" max-vertical-offset="1725">
-              <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.4202586" vertical-offset="1545" max-vertical-offset="2265">
+              <caret line="119" column="5" selection-start-line="119" selection-start-column="5" selection-end-line="119" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -625,8 +516,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/funsets/FunSetSuite.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8728448" vertical-offset="225" max-vertical-offset="1725">
-          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.4202586" vertical-offset="1545" max-vertical-offset="2265">
+          <caret line="119" column="5" selection-start-line="119" selection-start-column="5" selection-end-line="119" selection-end-column="5" />
           <folding />
         </state>
       </provider>
