@@ -44,7 +44,7 @@ class FunSetSuite extends FunSuite {
    * error message.
    */
   test("adding ints") {
-    assert(1 + 2 === 4)
+    assert(1 + 2 === 3)
   }
 
   
@@ -86,7 +86,7 @@ class FunSetSuite extends FunSuite {
    * Once you finish your implementation of "singletonSet", exchange the
    * function "ignore" by "test".
    */
-  ignore("singletonSet(1) contains 1") {
+  test("singletonSet(1) contains only 1") {
     
     /**
      * We create a new instance of the "TestSets" trait, this gives us access
@@ -97,7 +97,43 @@ class FunSetSuite extends FunSuite {
        * The string argument of "assert" is a message that is printed in case
        * the test fails. This helps identifying which assertion failed.
        */
-      assert(contains(s1, 1), "Singleton")
+      assert(contains(s1, 1), "Failed: Singleton s1 does not contains 1")
+      assert(!(contains(s2, 1)), "Failed: Singleton s2 contains 1")
+      assert(!(contains(s3, 1)), "Failed: Singleton s3 contains 1")
+    }
+  }
+
+  test("singletonSet(2) contains only 2") {
+
+    /**
+     * We create a new instance of the "TestSets" trait, this gives us access
+     * to the values "s1" to "s3".
+     */
+    new TestSets {
+      /**
+       * The string argument of "assert" is a message that is printed in case
+       * the test fails. This helps identifying which assertion failed.
+       */
+      assert(contains(s2, 2), "Failed: Singleton s2 does not contains 2")
+      assert(!(contains(s1, 2)), "Failed: Singleton s1 contains 2")
+      assert(!(contains(s3, 2)), "Failed: Singleton s3 contains 2")
+    }
+  }
+
+  test("singletonSet(3) contains only 3") {
+
+    /**
+     * We create a new instance of the "TestSets" trait, this gives us access
+     * to the values "s1" to "s3".
+     */
+    new TestSets {
+      /**
+       * The string argument of "assert" is a message that is printed in case
+       * the test fails. This helps identifying which assertion failed.
+       */
+      assert(contains(s3, 3), "Failed: Singleton s3 does not contains 3")
+      assert(!(contains(s1, 3)), "Failed: Singleton s1 contains 3")
+      assert(!(contains(s2, 3)), "Failed: Singleton s2 contains 3")
     }
   }
 
