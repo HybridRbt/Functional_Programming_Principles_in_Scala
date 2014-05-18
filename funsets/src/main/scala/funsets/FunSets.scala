@@ -63,7 +63,7 @@ object FunSets {
   /**
    * The bounds for `forall` and `exists` are +/- 1000.
    */
-  val bound = 1000
+  val bound = 10000
 
   /**
    * Returns whether all bounded integers within `s` satisfy `p`.
