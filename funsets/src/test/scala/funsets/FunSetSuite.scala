@@ -79,6 +79,14 @@ class FunSetSuite extends FunSuite {
     val s3 = singletonSet(3)
   }
 
+  trait TestSets2 {
+    val s1a = singletonSet(1)
+    val s2a = singletonSet(2000)
+    val s3a = singletonSet(30)
+    val s4a = singletonSet(10)
+    val s5a = singletonSet(-995)
+  }
+
   /**
    * This test is currently disabled (by using "ignore") because the method
    * "singletonSet" is not yet implemented and the test would fail.
@@ -221,6 +229,70 @@ class FunSetSuite extends FunSuite {
       assert(contains(sd, 3), "Failed: diff does not have 3")
       assert(!contains(sd, 1), "Failed: diff has 1")
       assert(!contains(sd, 2), "Failed: diff has 2")
+    }
+  }
+
+  test("filter contains subset of s that satisfy p") {
+    new TestSets {
+      val su1 = union(s1, s2)
+      val su2 = union(su1, s3) /** set == (1, 2, 3) */
+      val sf = filter(su2, (x: Int) => x > 2) /** would return (3) */
+
+      assert(contains(sf, 3), "Failed: filter does not have 3")
+      assert(!contains(sf, 2), "Failed: filter has 2")
+      assert(!contains(sf, 1), "Failed: filter has 1")
+    }
+
+    new TestSets {
+      val su1 = union(s1, s2)
+      val su2 = union(su1, s3) /** set == (1, 2, 3) */
+      val sf = filter(su2, (x: Int) => x < 3) /** would return (1, 2) */
+
+      assert(contains(sf, 1), "Failed: filter does not have 1")
+      assert(contains(sf, 2), "Failed: filter does not have 2")
+      assert(!contains(sf, 3), "Failed: filter has 3")
+    }
+
+    new TestSets {
+      val su1 = union(s1, s2)
+      val su2 = union(su1, s3) /** set == (1, 2, 3) */
+      val sf = filter(su2, (x: Int) => x > 3) /** would return (*empty*) */
+
+      assert(!contains(sf, 1), "Failed: filter has 1")
+      assert(!contains(sf, 2), "Failed: filter has 2")
+      assert(!contains(sf, 3), "Failed: filter has 3")
+    }
+
+    new TestSets {
+      val su1 = union(s1, s2)
+      val su2 = union(su1, s3) /** set == (1, 2, 3) */
+      val sf = filter(su2, (x: Int) => x > 0) /** would return (1, 2, 3) */
+
+      assert(contains(sf, 1), "Failed: filter does not have 1")
+      assert(contains(sf, 2), "Failed: filter does not have 2")
+      assert(contains(sf, 3), "Failed: filter does not have 3")
+    }
+  }
+
+  test("forall tests all integer in bound = +/- 1000") {
+    new TestSets2 {
+      val su1 = union(s1a, s2a)
+      /** set == (1, 1000) */
+      val su2 = union(su1, s3a)
+      /** set == (1, 1000, 30) */
+      val su3 = union(su2, s4a)
+      /** set == (1, 1000, 30, 10) */
+      val su4 = union(su3, s5a)
+      /** set == (1, 1000, 30, 10, -995) */
+      val sfa1 = forall(su4, (x: Int) => x > 2)
+      /** would return false */
+      val sfa2 = forall(su4, (x: Int) => x < 0)
+      /** would return false */
+      val sfa3 = forall(su4, (x: Int) => x > -999 && x < 2000) /** would return true */
+
+      assert(!sfa1, "Failed: forall should return false")
+      assert(!sfa2, "Failed: forall should return false")
+      assert(sfa3, "Failed: forall should return true")
     }
   }
 }
