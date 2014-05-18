@@ -276,6 +276,7 @@ class FunSetSuite extends FunSuite {
 
   test("forall tests all integer in bound = +/- 1000") {
     new TestSets2 {
+      val s0 = intersect(s2a, s3a) /** an empty one */
       val su1 = union(s1a, s2a)
       /** set == (1, 1000) */
       val su2 = union(su1, s3a)
@@ -289,10 +290,12 @@ class FunSetSuite extends FunSuite {
       val sfa2 = forall(su4, (x: Int) => x < 0)
       /** would return false */
       val sfa3 = forall(su4, (x: Int) => x > -999 && x < 2000) /** would return true */
+      val sfa0 = forall(s0, (x: Int) => x > 2) /** would return true */
 
       assert(!sfa1, "Failed: forall should return false")
       assert(!sfa2, "Failed: forall should return false")
       assert(sfa3, "Failed: forall should return true")
+      assert(sfa0, "Failed: forall should return false")
     }
   }
 }
