@@ -28,65 +28,76 @@ object FunSets {
   * Returns the union of the two given sets,
   * the sets of all elements that are in either `s` or `t`.
   */
-  def union(s: Set, t: Set): Set = ???
+  def union(s: Set, t: Set): Set = {
+    (x: Int) => contains(t, x) || contains(s, x)
+  }
 
-      /**
-       * Returns the intersection of the two given sets,
-       * the set of all elements that are both in `s` and `t`.
-       */
-      def intersect(s: Set, t: Set): Set = ???
+  /**
+   * Returns the intersection of the two given sets,
+   * the set of all elements that are both in `s` and `t`.
+   */
+  def intersect(s: Set, t: Set): Set = {
+    (x: Int) => contains(t, x) && contains(s, x)
+  }
 
-      /**
-       * Returns the difference of the two given sets,
-       * the set of all elements of `s` that are not in `t`.
-       */
-      def diff(s: Set, t: Set): Set = ???
+  /**
+   * Returns the difference of the two given sets,
+   * the set of all elements of `s` that are not in `t`.
+   */
 
-      /**
-       * Returns the subset of `s` for which `p` holds.
-       */
-      def filter(s: Set, p: Int => Boolean): Set = ???
+  /**
+   *
+   * Note 2 self: only the elements in 's', no elements in 't' that are not in 's'
+   */
+  def diff(s: Set, t: Set): Set = {
+    (x: Int) => contains(s, x) && !contains(t, x)
+  }
 
-      /**
-       * The bounds for `forall` and `exists` are +/- 1000.
-       */
-      val bound = 1000
+  /**
+   * Returns the subset of `s` for which `p` holds.
+   */
+  def filter(s: Set, p: Int => Boolean): Set = ???
 
-      /**
-       * Returns whether all bounded integers within `s` satisfy `p`.
-       */
-      def forall(s: Set, p: Int => Boolean): Boolean = {
-        def iter(a: Int): Boolean = {
-          if (???) ???
-          else if (???) ???
-          else iter(???)
-        }
-        iter(???)
-      }
+  /**
+   * The bounds for `forall` and `exists` are +/- 1000.
+   */
+  val bound = 1000
 
-      /**
-       * Returns whether there exists a bounded integer within `s`
-       * that satisfies `p`.
-       */
-      def exists(s: Set, p: Int => Boolean): Boolean = ???
+  /**
+   * Returns whether all bounded integers within `s` satisfy `p`.
+   */
+  def forall(s: Set, p: Int => Boolean): Boolean = {
+    def iter(a: Int): Boolean = {
+      if (???) ???
+      else if (???) ???
+      else iter(???)
+    }
+    iter(???)
+  }
 
-      /**
-       * Returns a set transformed by applying `f` to each element of `s`.
-       */
-      def map(s: Set, f: Int => Int): Set = ???
+  /**
+   * Returns whether there exists a bounded integer within `s`
+   * that satisfies `p`.
+   */
+  def exists(s: Set, p: Int => Boolean): Boolean = ???
 
-      /**
-       * Displays the contents of a set
-       */
-      def toString(s: Set): String = {
-        val xs = for (i <- -bound to bound if contains(s, i)) yield i
-        xs.mkString("{", ",", "}")
-      }
+  /**
+   * Returns a set transformed by applying `f` to each element of `s`.
+   */
+  def map(s: Set, f: Int => Int): Set = ???
 
-      /**
-       * Prints the contents of a set on the console.
-       */
-      def printSet(s: Set) {
-        println(toString(s))
-      }
+  /**
+   * Displays the contents of a set
+   */
+  def toString(s: Set): String = {
+    val xs = for (i <- -bound to bound if contains(s, i)) yield i
+    xs.mkString("{", ",", "}")
+  }
+
+  /**
+   * Prints the contents of a set on the console.
+   */
+  def printSet(s: Set) {
+    println(toString(s))
+  }
 }
