@@ -77,8 +77,7 @@ object FunSets {
       if (a < -bound) true
 
       /** finished iteration and no false, so true */
-      //else if (contains(s, a) && !contains(p, a)) false  /** when a is in bound, test to see if it is in a, and if it is, if it satisfy p */
-      else if (FunSets.toString(diff(s, p)) != "{}") false
+      else if (contains(s, a) && !p(a)) false  /** when a is in bound, test to see if it is in a, and if it is, if it satisfy p */
 
       /** when a is in bound, test to see if it is in a, and if it is, if it satisfy p */
       /** see p as another set, this means diff of s, p must be empty or forall return false */
