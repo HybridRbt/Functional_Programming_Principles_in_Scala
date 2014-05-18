@@ -29,7 +29,7 @@ class FunSetSuite extends FunSuite {
   /**
    * Tests are written using the "test" operator and the "assert" method.
    */
-  test("string take") {
+ ignore("string take") {
     val message = "hello, world"
     assert(message.take(5) == "hello")
   }
@@ -43,7 +43,7 @@ class FunSetSuite extends FunSuite {
    * Try it out! Change the values so that the assertion fails, and look at the
    * error message.
    */
-  test("adding ints") {
+  ignore("adding ints") {
     assert(1 + 2 === 3)
   }
 
@@ -98,8 +98,8 @@ class FunSetSuite extends FunSuite {
        * the test fails. This helps identifying which assertion failed.
        */
       assert(contains(s1, 1), "Failed: Singleton s1 does not contains 1")
-      assert(!(contains(s2, 1)), "Failed: Singleton s2 contains 1")
-      assert(!(contains(s3, 1)), "Failed: Singleton s3 contains 1")
+      assert(!contains(s2, 1), "Failed: Singleton s2 contains 1")
+      assert(!contains(s3, 1), "Failed: Singleton s3 contains 1")
     }
   }
 
@@ -115,8 +115,8 @@ class FunSetSuite extends FunSuite {
        * the test fails. This helps identifying which assertion failed.
        */
       assert(contains(s2, 2), "Failed: Singleton s2 does not contains 2")
-      assert(!(contains(s1, 2)), "Failed: Singleton s1 contains 2")
-      assert(!(contains(s3, 2)), "Failed: Singleton s3 contains 2")
+      assert(!contains(s1, 2), "Failed: Singleton s1 contains 2")
+      assert(!contains(s3, 2), "Failed: Singleton s3 contains 2")
     }
   }
 
@@ -132,17 +132,95 @@ class FunSetSuite extends FunSuite {
        * the test fails. This helps identifying which assertion failed.
        */
       assert(contains(s3, 3), "Failed: Singleton s3 does not contains 3")
-      assert(!(contains(s1, 3)), "Failed: Singleton s1 contains 3")
-      assert(!(contains(s2, 3)), "Failed: Singleton s2 contains 3")
+      assert(!contains(s1, 3), "Failed: Singleton s1 contains 3")
+      assert(!contains(s2, 3), "Failed: Singleton s2 contains 3")
     }
   }
 
-  ignore("union contains all elements") {
+  test("union contains all elements") {
     new TestSets {
       val s = union(s1, s2)
-      assert(contains(s, 1), "Union 1")
-      assert(contains(s, 2), "Union 2")
-      assert(!contains(s, 3), "Union 3")
+      assert(contains(s, 1), "Failed: Union does not have 1")
+      assert(contains(s, 2), "Failed: Union does not have 2")
+      assert(!contains(s, 3), "Failed: Union has 3")
+    }
+
+    new TestSets {
+      val s = union(s2, s3)
+      assert(!contains(s, 1), "Failed: Union has 1")
+      assert(contains(s, 2), "Failed: Union does not have 2")
+      assert(contains(s, 3), "Failed: Union does not have 3")
+    }
+
+    new TestSets {
+      val s = union(s1, s3)
+      assert(contains(s, 1), "Failed: Union does not have 1")
+      assert(!contains(s, 2), "Failed: Union has 2")
+      assert(contains(s, 3), "Failed: Union does not have 3")
+    }
+  }
+
+  test("intersect contains only elements in both sets") {
+    new TestSets {
+      val su1 = union(s1, s2)
+      val su2 = union(s2, s3)
+      val si = intersect(su1, su2)
+
+      assert(contains(si, 2), "Failed: Intersect does not have 2")
+      assert(!contains(si, 1), "Failed: Union has 1")
+      assert(!contains(si, 3), "Failed: Union has 3")
+    }
+
+    new TestSets {
+      val su1 = union(s1, s3)
+      val su2 = union(s2, s3)
+      val si = intersect(su1, su2)
+
+      assert(contains(si, 3), "Failed: Intersect does not have 3")
+      assert(!contains(si, 1), "Failed: Union has 1")
+      assert(!contains(si, 2), "Failed: Union has 2")
+    }
+
+    new TestSets {
+      val su1 = union(s1, s3)
+      val su2 = union(s1, s2)
+      val si = intersect(su1, su2)
+
+      assert(contains(si, 1), "Failed: Intersect does not have 3")
+      assert(!contains(si, 3), "Failed: Union has 3")
+      assert(!contains(si, 2), "Failed: Union has 2")
+    }
+  }
+
+  test("diff contains only elements in s and not in t") {
+    new TestSets {
+      val su1 = union(s1, s2)
+      val su2 = union(s2, s3)
+      val sd = diff(su1, su2) /** would return s1 (1) */
+
+      assert(contains(sd, 1), "Failed: diff does not have 1")
+      assert(!contains(sd, 2), "Failed: diff has 2")
+      assert(!contains(sd, 3), "Failed: diff has 3")
+    }
+
+    new TestSets {
+      val su1 = union(s2, s3)
+      val su2 = union(s1, s3)
+      val sd = diff(su1, su2) /** would return s2 (2) */
+
+      assert(contains(sd, 2), "Failed: diff does not have 2")
+      assert(!contains(sd, 1), "Failed: diff has 1")
+      assert(!contains(sd, 3), "Failed: diff has 3")
+    }
+
+    new TestSets {
+      val su1 = union(s1, s3)
+      val su2 = union(s1, s2)
+      val sd = diff(su1, su2) /** would return s3 (3) */
+
+      assert(contains(sd, 3), "Failed: diff does not have 3")
+      assert(!contains(sd, 1), "Failed: diff has 1")
+      assert(!contains(sd, 2), "Failed: diff has 2")
     }
   }
 }
