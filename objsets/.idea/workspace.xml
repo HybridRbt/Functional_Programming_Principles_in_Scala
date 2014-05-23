@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="df8ecc29-820c-4ce6-bbf4-583782c7fe24" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/objsets/TweetSet.scala" afterPath="$PROJECT_DIR$/src/main/scala/objsets/TweetSet.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="progfun-objsets.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +28,8 @@
       <file leaf-file-name="TweetSet.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/objsets/TweetSet.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46539026" vertical-offset="1754" max-vertical-offset="3180">
-              <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.72901326" vertical-offset="1650" max-vertical-offset="3180">
+              <caret line="78" column="34" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -552,8 +551,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/objsets/TweetSet.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46539026" vertical-offset="1754" max-vertical-offset="3180">
-          <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.72901326" vertical-offset="1650" max-vertical-offset="3180">
+          <caret line="78" column="34" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="34" />
           <folding />
         </state>
       </provider>
