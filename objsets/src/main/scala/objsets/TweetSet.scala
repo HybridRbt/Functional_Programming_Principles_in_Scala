@@ -56,8 +56,9 @@ abstract class TweetSet {
    *
    * Question: Should we implement this method here, or should it remain abstract
    * and be implemented in the subclasses?
+   * A: In subclasses
    */
-   def union(that: TweetSet): TweetSet = ???
+   def union(that: TweetSet): TweetSet
 
   /**
    * Returns the tweet from this set which has the greatest retweet count.
@@ -67,8 +68,14 @@ abstract class TweetSet {
    *
    * Question: Should we implement this method here, or should it remain abstract
    * and be implemented in the subclasses?
+   * A: In subclasses
    */
-  def mostRetweeted: Tweet = ???
+  def mostRetweeted: Tweet
+
+  /**
+   * This is a helper method for `mostRetweeted` that propagates the current most retweeted tweets.
+   */
+  def mostRetweetedAcc(x: Tweet): Tweet
 
   /**
    * Returns a list containing all tweets of this set, sorted by retweet count
@@ -116,6 +123,20 @@ class Empty extends TweetSet {
     acc
   }
 
+  /**
+   * union should be implemented here since the implementation of Empty and NonEmpty will be different
+   */
+  def union(that: TweetSet): TweetSet = {
+    that
+  }
+
+  def mostRetweeted: Tweet = {
+    throw new java.util.NoSuchElementException("Calling on Empty set")
+  }
+
+  def mostRetweetedAcc(x: Tweet): Tweet = {
+    x
+  }
 
   /**
    * The following methods are already implemented
@@ -137,6 +158,21 @@ class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
     else right.filterAcc(p, left.filterAcc(p, acc))
   }
 
+  /**
+   * union should be implemented here since the implementation of Empty and NonEmpty will be different
+   */
+  def union(that: TweetSet): TweetSet = {
+    filterAcc(elem => (this.contains(elem)), that)
+  }
+
+  def mostRetweeted: Tweet = {
+    mostRetweetedAcc(elem)
+  }
+
+  def mostRetweetedAcc(x: Tweet): Tweet = {
+    if (elem.retweets > x.retweets) right.mostRetweetedAcc(left.mostRetweetedAcc(elem))
+    else right.mostRetweetedAcc(left.mostRetweetedAcc(x))
+  }
 
   /**
    * The following methods are already implemented
