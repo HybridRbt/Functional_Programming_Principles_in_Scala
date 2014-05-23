@@ -42,7 +42,9 @@ abstract class TweetSet {
    * Question: Can we implment this method here, or should it remain abstract
    * and be implemented in the subclasses?
    */
-  def filter(p: Tweet => Boolean): TweetSet = ???
+  def filter(p: Tweet => Boolean): TweetSet = {
+    filterAcc(p, new Empty)
+  }
 
   /**
    * This is a helper method for `filter` that propagates the accumulated tweets.
@@ -110,7 +112,9 @@ abstract class TweetSet {
 
 class Empty extends TweetSet {
 
-  def filterAcc(p: Tweet => Boolean, acc: TweetSet): TweetSet = ???
+  def filterAcc(p: Tweet => Boolean, acc: TweetSet): TweetSet = {
+    acc
+  }
 
 
   /**
@@ -129,7 +133,8 @@ class Empty extends TweetSet {
 class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
 
   def filterAcc(p: Tweet => Boolean, acc: TweetSet): TweetSet = {
-    if acc.
+    if (p(elem)) right.filterAcc(p, left.filterAcc(p, acc.incl(elem)))
+    else right.filterAcc(p, left.filterAcc(p, acc))
   }
 
 
