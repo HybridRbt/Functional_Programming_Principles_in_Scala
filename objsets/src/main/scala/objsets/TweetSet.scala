@@ -42,6 +42,8 @@ abstract class TweetSet {
    * Question: Can we implement this method here, or should it remain abstract
    * and be implemented in the subclasses?
    */
+  def isEmpty: Boolean
+
   def filter(p: Tweet => Boolean): TweetSet = {
     filterAcc(p, new Empty)
   }
@@ -119,6 +121,8 @@ abstract class TweetSet {
 
 class Empty extends TweetSet {
 
+  def isEmpty: Boolean = true
+
   def filterAcc(p: Tweet => Boolean, acc: TweetSet): TweetSet = {
     acc
   }
@@ -143,7 +147,7 @@ class Empty extends TweetSet {
   }
 
   def descendingByRetweetAcc(ts: TweetSet, tl: TweetList): TweetList = {
-    Nil
+    tl
   }
 
   /**
@@ -160,6 +164,8 @@ class Empty extends TweetSet {
 }
 
 class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
+
+  def isEmpty: Boolean = false
 
   def filterAcc(p: Tweet => Boolean, acc: TweetSet): TweetSet = {
     if (p(elem)) right.filterAcc(p, left.filterAcc(p, acc.incl(elem)))
@@ -183,12 +189,12 @@ class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
   }
 
   def descendingByRetweet: TweetList = {
-    new Cons(this.mostRetweeted, descendingByRetweetAcc(this, Nil))
+    new Cons(this.mostRetweeted, descendingByRetweetAcc(this.remove(this.mostRetweeted), Nil))
   }
 
   def descendingByRetweetAcc(ts: TweetSet, tl: TweetList): TweetList = {
-    if (tl.isEmpty) Nil
-    else descendingByRetweetAcc(ts.remove(ts.mostRetweeted), tl)
+    if (ts.isEmpty) tl
+    else new Cons(ts.mostRetweeted, descendingByRetweetAcc(ts.remove(ts.mostRetweeted), tl))
   }
 
   /**
@@ -244,17 +250,18 @@ object GoogleVsApple {
   val google = List("android", "Android", "galaxy", "Galaxy", "nexus", "Nexus")
   val apple = List("ios", "iOS", "iphone", "iPhone", "ipad", "iPad")
 
-  lazy val googleTweets: TweetSet = ???
-  lazy val appleTweets: TweetSet = ???
+  lazy val googleTweets: TweetSet = TweetReader.allTweets.filter(tweet => google.exists(gl => tweet.text.contains(gl)))
+  lazy val appleTweets: TweetSet = TweetReader.allTweets.filter(tweet => apple.exists(al => tweet.text.contains(al)))
 
   /**
    * A list of all tweets mentioning a keyword from either apple or google,
    * sorted by the number of retweets.
    */
-  lazy val trending: TweetList = ???
+  lazy val trending: TweetList = googleTweets.union(appleTweets).descendingByRetweet
 }
 
 object Main extends App {
   // Print the trending tweets
   GoogleVsApple.trending foreach println
+//  GoogleVsApple.googleTweets foreach println
 }
