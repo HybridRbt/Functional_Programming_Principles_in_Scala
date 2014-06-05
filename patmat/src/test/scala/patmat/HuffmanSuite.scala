@@ -80,6 +80,12 @@ class HuffmanSuite extends FunSuite {
     assert(encode(tree)(text) === List(1,0,0,0,1,0,1,0))
   }
 
+  test("convert function") {
+    val ct: CodeTable = List(('A', List(0, 0)), ('B', List(0, 1)), ('C', List(1)))
+    val tree = Fork(Fork(Leaf('A', 1), Leaf('B', 1), List('A', 'B'), 2), Leaf('C', 1), List('A', 'B', 'C'), 3)
+    assert(convert(tree) === ct)
+  }
+
   test("createCodeTree efficiency") {
     testCodeTreeEfficiency("someText", 22)
     testCodeTreeEfficiency("Huffman est cool", 58)

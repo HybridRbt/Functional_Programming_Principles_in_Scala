@@ -243,20 +243,15 @@ object Huffman {
    * This function encodes `text` using the code tree `tree`
    * into a sequence of bits.
    */
-  def encode(tree: CodeTree)(text: List[Char]): List[Bit] = text match {
-    case Nil => Nil
-    case t :: t1 => encodeOne(tree)(t) ::: encode(tree)(t1)
-  }
-
-  def encodeOne(tree: CodeTree)(c: Char): List[Bit] = {
-    def encodeOneRec(pt: CodeTree, curBits: List[Bit])(c: Char): List[Bit] = tree match {
-      case Leaf(ch, _) if ch == c => curBits
-      case Leaf(ch, _) if ch != c => Nil
-      case Fork(left, right, _, _) if !chars(pt).contains(c) => curBits
-      case Fork(left, right, _, _) if chars(pt).contains(c) => if (chars(left).contains(c)) curBits ::: encodeOneRec(left, curBits)(c) else curBits ::: encodeOneRec(right, curBits)(c)
+  def encode(tree: CodeTree)(text: List[Char]): List[Bit] = {
+    def encodeOne(pt: CodeTree, c: Char): List[Bit] = pt match {
+      case Leaf(_, _) => Nil
+      case Fork(left, right, _, _) =>
+        if (chars(left).contains(c)) 0 :: encodeOne(left, c)
+        else 1 :: encodeOne(right, c)
     }
 
-    encodeOneRec(tree, List())(c)
+    text.flatMap(encodeOne(tree, _))
   }
 
   // Part 4b: Encoding using code table
@@ -280,23 +275,14 @@ object Huffman {
    * sub-trees, think of how to build the code table for the entire tree.
    */
   def convert(tree: CodeTree): CodeTable = {
+    def convertOne(pt: CodeTree, c: Char): CodeTable = pt match {
+      case Leaf(_, _) => List((c, Nil))
+      case Fork(left, right, _, _) =>
+        if (chars(left).contains(c)) List((c, 0 :: convertOne(left, c).head._2))
+        else List((c, 1 :: convertOne(right, c).head._2))
+    }
 
-    chars(tree) map convertrec(tree, List())
-  }
-
-  /**
-   * This function returns the bit sequence that represents the character `char` in
-   * the code tree `tree`.
-   */
-  def codeBitsInTree(tree: CodeTree)(char: Char): List[Bit] = {
-    (table filter (t => t._1 == char)).head._2
-  }
-
-  def convertOne(pt: CodeTree, curBits: List[Bit])(char: Char): List[Bit] = pt match {
-    case Leaf(c, _) if c == char => curBits
-    case Leaf(c, _) if c != char => Nil
-    case Fork(left, right, _, _) if char not in chars(Fork) => currentBits
-    case Fork(left, right, _, _) if char in chars(Fork) => if char in chars(left) codeBits(convertrec(left), ) else codeBits(convert)
+    chars(tree).flatMap(convertOne(tree, _))
   }
 
   /**
