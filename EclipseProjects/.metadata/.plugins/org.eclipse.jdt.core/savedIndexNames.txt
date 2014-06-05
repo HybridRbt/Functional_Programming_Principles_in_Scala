@@ -1,6 +1,4 @@
 INDEX VERSION 1.126+/Users/jeredyang/Documents/Github/Functional_Programming_Principles_in_Scala/EclipseProjects/.metadata/.plugins/org.eclipse.jdt.core
-3927879410.index
-923092182.index
 2012739359.index
-325225562.index
-2053380501.index
+3918750396.index
+3927879410.index
