@@ -46,8 +46,8 @@ object Huffman {
   // Part 2: Generating Huffman trees
 
   /**
-   * In this assignment, we are working with lists of characters. This function allows
-   * you to easily create a character list from a given string.
+   * In this assignment, we are working with lists of characters.
+   * This function allows you to easily create a character list from a given string.
    */
   def string2Chars(str: String): List[Char] = str.toList
 
@@ -79,7 +79,18 @@ object Huffman {
    *       println("integer is  : "+ theInt)
    *   }
    */
-  def times(chars: List[Char]): List[(Char, Int)] = ???
+  def times(chars: List[Char]): List[(Char, Int)] = {
+    pack(chars) map (ys => (ys.head, ys.length))
+  }
+  /**   Helper function from video lecture
+    * modify span to partition
+    */
+  def pack(xs: List[Char]): List[List[Char]] = xs match {
+    case Nil => Nil
+    case x :: xs1 =>
+      val (fst, rst) = xs partition (y => y == x)
+      fst :: pack(rst)
+  }
 
   /**
    * Returns a list of `Leaf` nodes for a given frequency table `freqs`.
