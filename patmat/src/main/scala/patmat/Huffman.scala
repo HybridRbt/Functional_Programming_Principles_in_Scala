@@ -99,9 +99,31 @@ object Huffman {
    * head of the list should have the smallest weight), where the weight
    * of a leaf is the frequency of the character.
    */
-  def makeOrderedLeafList(freqs: List[(Char, Int)]): List[Leaf] = ???
+  def makeOrderedLeafList(freqs: List[(Char, Int)]): List[Leaf] = {
+    msortByFreq(freqs) map (freq => Leaf(freq._1, freq._2))
+  }
 
   /**
+   * Helper function to sort frequency table by frequency using merge sort
+   * */
+  def msortByFreq(freqs: List[(Char, Int)])(implicit ord: Ordering[Int]): List[(Char, Int)] = {
+    val n = freqs.length / 2
+    if (n == 0) freqs
+    else {
+      def merge(xs: List[(Char, Int)], ys: List[(Char, Int)]): List[(Char, Int)] = (xs, ys) match {
+        case (Nil, ys) => ys
+        case (xs, Nil) => xs
+        case (x :: xs1, y :: ys1) =>
+          if (ord.lt(x._2, y._2)) x :: merge(xs1, ys)
+          else y :: merge(xs, ys1)
+      }
+
+      val (fst, snd) = freqs splitAt n
+      merge(msortByFreq(fst), msortByFreq(snd))
+    }
+  }
+
+   /**
    * Checks whether the list `trees` contains only one single code tree.
    */
   def singleton(trees: List[CodeTree]): Boolean = ???
