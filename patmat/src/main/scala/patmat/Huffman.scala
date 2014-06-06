@@ -82,6 +82,7 @@ object Huffman {
   def times(chars: List[Char]): List[(Char, Int)] = {
     pack(chars) map (ys => (ys.head, ys.length))
   }
+
   /**   Helper function from video lecture
     * modify span to partition
     */
@@ -100,35 +101,14 @@ object Huffman {
    * of a leaf is the frequency of the character.
    */
   def makeOrderedLeafList(freqs: List[(Char, Int)]): List[Leaf] = {
-    msortByFreq(freqs) map (freq => new Leaf(freq._1, freq._2))
-  }
-
-  /**
-   * Helper function to sort frequency table by frequency using merge sort
-   * */
-  def msortByFreq(freqs: List[(Char, Int)])(implicit ord: Ordering[Int]): List[(Char, Int)] = {
-    val n = freqs.length / 2
-    if (n == 0) freqs
-    else {
-      def merge(xs: List[(Char, Int)], ys: List[(Char, Int)]): List[(Char, Int)] = (xs, ys) match {
-        case (Nil, ys) => ys
-        case (xs, Nil) => xs
-        case (x :: xs1, y :: ys1) =>
-          if (ord.lt(x._2, y._2)) x :: merge(xs1, ys)
-          else y :: merge(xs, ys1)
-      }
-
-      val (fst, snd) = freqs splitAt n
-      merge(msortByFreq(fst), msortByFreq(snd))
-    }
+    freqs.sortWith((f1, f2) => f1._2 < f2._2).map((f) => Leaf (f._1, f._2))
   }
 
    /**
    * Checks whether the list `trees` contains only one single code tree.
    */
-  def singleton(trees: List[CodeTree]): Boolean = trees match {
-     case Nil => false
-     case tree :: trees1 => trees1.length == 0
+  def singleton(trees: List[CodeTree]): Boolean = {
+     trees.size == 1
    }
 
   /**
@@ -143,19 +123,31 @@ object Huffman {
    * If `trees` is a list of less than two elements, that list should be returned
    * unchanged.
    */
-  def combine(trees: List[CodeTree]): List[CodeTree] = trees match {
-    case Nil => Nil
-    case tree :: trees1 => if (trees1.length < 1) trees
-      else {
-      combineNodes(tree, trees1.head) :: trees1.tail
+//  def combine(trees: List[CodeTree]): List[CodeTree] = trees match {
+//    case Nil => Nil
+//    case tree :: trees1 => if (trees1.length < 1) trees
+//      else {
+//      combineNodes(tree, trees1.head) :: trees1.tail
+//    }
+//  }
+//
+//  /**
+//   * Helper function to combine two nodes into a fork node
+//   * */
+//  def combineNodes(tree1: CodeTree, tree2: CodeTree): Fork = {
+//    new Fork(tree1, tree2, chars(tree1) ++ chars(tree2), weight(tree1) + weight(tree2))
+//  }
+  def combine(trees: List[CodeTree]): List[CodeTree] =
+  {
+    def _insert(tree: CodeTree, list: List[CodeTree]): List[CodeTree]=
+      list match {
+        case h::t if weight(tree) > weight(h) => h :: _insert(tree,t)
+        case _ => tree :: list
+      }
+    trees match {
+      case h::t if t != List() => _insert(makeCodeTree(h,t.head),t.tail)
+      case _ => trees
     }
-  }
-
-  /**
-   * Helper function to combine two nodes into a fork node
-   * */
-  def combineNodes(tree1: CodeTree, tree2: CodeTree): Fork = {
-    new Fork(tree1, tree2, chars(tree1) ++ chars(tree2), weight(tree1) + weight(tree2))
   }
 
   /**
@@ -175,14 +167,16 @@ object Huffman {
    *    the example invocation. Also define the return type of the `until` function.
    *  - try to find sensible parameter names for `xxx`, `yyy` and `zzz`.
    */
-  def until(endCondition: List[CodeTree] => Boolean, actionOnList: List[CodeTree] => List[CodeTree])(trees: List[CodeTree]): List[CodeTree] = {
-    def loop(ts: List[CodeTree]): List[CodeTree] = {
-      if (endCondition(ts)) ts
-      else loop(actionOnList(ts))
-    }
-
-    loop(trees)
-  }
+//  def until(endCondition: List[CodeTree] => Boolean, actionOnList: List[CodeTree] => List[CodeTree])(trees: List[CodeTree]): List[CodeTree] = {
+//    def loop(ts: List[CodeTree]): List[CodeTree] = {
+//      if (endCondition(ts)) ts
+//      else loop(actionOnList(ts))
+//    }
+//
+//    loop(trees)
+//  }
+  def until(test: (List[CodeTree]=>Boolean), transform: (List[CodeTree]=>List[CodeTree]))(trees: List[CodeTree]): List[CodeTree] =
+    if(test(trees)) trees else until(test,transform)(transform(trees))
 
   /**
    * This function creates a code tree which is optimal to encode the text `chars`.
