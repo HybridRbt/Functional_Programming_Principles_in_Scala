@@ -123,13 +123,13 @@ object Huffman {
    * If `trees` is a list of less than two elements, that list should be returned
    * unchanged.
    */
-//  def combine(trees: List[CodeTree]): List[CodeTree] = trees match {
-//    case Nil => Nil
-//    case tree :: trees1 => if (trees1.length < 1) trees
-//      else {
-//      combineNodes(tree, trees1.head) :: trees1.tail
-//    }
-//  }
+  def combine(trees: List[CodeTree]): List[CodeTree] = trees match {
+    case Nil => Nil
+    case tree :: trees1 => if (trees1.length < 1) trees
+      else {
+      (makeCodeTree(tree, trees1.head) :: trees1.tail).sortWith((f1, f2) => weight(f1) < weight(f2))
+    }
+  }
 //
 //  /**
 //   * Helper function to combine two nodes into a fork node
@@ -137,18 +137,18 @@ object Huffman {
 //  def combineNodes(tree1: CodeTree, tree2: CodeTree): Fork = {
 //    new Fork(tree1, tree2, chars(tree1) ++ chars(tree2), weight(tree1) + weight(tree2))
 //  }
-  def combine(trees: List[CodeTree]): List[CodeTree] =
-  {
-    def _insert(tree: CodeTree, list: List[CodeTree]): List[CodeTree]=
-      list match {
-        case h::t if weight(tree) > weight(h) => h :: _insert(tree,t)
-        case _ => tree :: list
-      }
-    trees match {
-      case h::t if t != List() => _insert(makeCodeTree(h,t.head),t.tail)
-      case _ => trees
-    }
-  }
+//  def combine(trees: List[CodeTree]): List[CodeTree] =
+//  {
+//    def _insert(tree: CodeTree, list: List[CodeTree]): List[CodeTree]=
+//      list match {
+//        case h::t if weight(tree) > weight(h) => h :: _insert(tree,t)
+//        case _ => tree :: list
+//      }
+//    trees match {
+//      case h::t if t != List() => _insert(makeCodeTree(h,t.head),t.tail)
+//      case _ => trees
+//    }
+//  }
 
   /**
    * This function will be called in the following way:
